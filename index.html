@@ -33,7 +33,7 @@
         <p class="main__txt-hero">There are many things to do, but starting is the most important part.</p>
         <p class="main__txt-hero">Sign up now to get started. You <em>know</em> you want to.</p>
       </div>
-      <form action="/" method="get">
+      <form action="/" method="get" id="sign_up_form">
         <fieldset class="main__form">
           <div class="main__row">
             <h2 class="main__txt-form">This is not a real online service!</h2>
@@ -54,18 +54,21 @@
               </div>
               <div class="wrapper-column">
                 <label for="phone_number" id="phone_number_label" class="main__label">PHONE NUMBER</label>
-                <input type="tel" id="phone_number" name="phone_number" required class="main__input">
+                <input type="tel" id="phone_number" name="phone_number" required pattern="^[+]?[0-9]{9,12}$" title="+63XXXXXXXXXX" class="main__input">
               </div>
             </div>
             <div class="wrapper-row">
               <div class="wrapper-column">
                 <label for="password" id="password_label" class="main__label">PASSWORD</label>
-                <input type="password" id="password" name="password" required class="main__input main__input-password">
+                <input type="password" id="password" name="password" required pattern="^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*-_=+.,]).{8,}$"
+                  title="Password must be at least 8 characters long and includes a number, an uppercase letter, a lowercase letter, and a special character (!@#$%^&*-_=+.,)"
+                  class="main__input"
+                >
               </div>
               <div class="wrapper-column">
                 <label for="confirm_password" id="confirm_password_label" class="main__label">CONFIRM PASSWORD</label>
-                <input type="password" id="confirm_password" name="confirm_password" required class="main__input main__input-password">
-                <p class="main__txt-password">* Passwords do not match</p>
+                <input type="password" id="confirm_password" name="confirm_password" required class="main__input">
+                <p id="password_message" class="main__txt-password">* Passwords do not match</p>
               </div>
             </div>
           </div>

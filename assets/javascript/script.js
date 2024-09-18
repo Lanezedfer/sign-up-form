@@ -16,3 +16,38 @@ document.addEventListener('DOMContentLoaded', () => {
     input.addEventListener('blur', () => label.classList.remove('main__label--focus'));
   });
 });
+
+document.getElementById('sign_up_form').addEventListener('submit', (event) => {
+  const firstName = document.getElementById('first_name');
+  const lastName = document.getElementById('last_name');
+  const email = document.getElementById('email');
+  const phoneNumber = document.getElementById('phone_number');
+  const password = document.getElementById('password');
+  const confirmPassword = document.getElementById('confirm_password');
+  const passwordValue = document.getElementById('password').value;
+  const confirmPasswordValue = document.getElementById('confirm_password').value;
+  const passwordMessage = document.getElementById('password_message');
+
+  passwordMessage.classList.remove('main__txt-password--message');
+
+  if (passwordValue === confirmPasswordValue) {
+    event.preventDefault();
+    alert('Form validated.');
+    firstName.value = '';
+    lastName.value = '';
+    email.value = '';
+    phoneNumber.value = '';
+    password.value = '';
+    confirmPassword.value = '';
+    password.classList.remove('main__input-password--invalid');
+    confirmPassword.classList.remove('main__input-password--invalid');
+    passwordMessage.classList.remove('main__txt-password--message');
+  }
+
+  if (passwordValue !== confirmPasswordValue) {
+    event.preventDefault();
+    password.classList.add('main__input-password--invalid');
+    confirmPassword.classList.add('main__input-password--invalid');
+    passwordMessage.classList.add('main__txt-password--message');
+  }
+});

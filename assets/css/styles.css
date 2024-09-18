@@ -174,7 +174,11 @@ main {
   outline-style: none;
 }
 
-.main__input-password:invalid {
+.main__input:invalid:focus {
+  border: 0.1em solid var(--color-warning);
+}
+
+.main__input-password--invalid {
   border: 0.1em solid var(--color-warning);
 }
 
@@ -217,7 +221,12 @@ main {
 }
 
 .main__txt-password {
+  display: none;
+}
+
+.main__txt-password--message {
   color: var(--color-warning);
+  display: block;
   margin: 0.3em 0;
 }
 
