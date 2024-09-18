@@ -8,6 +8,7 @@
     <link href="./assets/images/favicon/lanezedfer-favicon-16x16.ico" rel="icon" type="image/x-icon" sizes="16x16">
     <link href="./assets/css/reset.css" rel="stylesheet">
     <link href="./assets/css/styles.css" rel="stylesheet">
+    <script src="./assets/javascript/script.js" defer></script>
   </head>
   <body>
     <header>
@@ -17,11 +18,11 @@
           <h1 class="header__txt-logo">Sign-up Form</h1>
         </div>
         <div class="header__logo-wrapper">
-          <p>Developed by <a href="https://github.com/Lanezedfer" target="_blank" rel="noopener noreferrer" class="header__link">Lanezedfer</a></p>
+          <p class="header__txt-profile">Developed by <a href="https://github.com/Lanezedfer" target="_blank" rel="noopener noreferrer" class="header__link">Lanezedfer</a></p>
         </div>
       </div>
       <div class="header__bottom">
-        <p>
+        <p class="header__txt-credit">
           Image by <a href="https://unsplash.com/@fabiolik" target="_blank" rel="noopener noreferrer" class="header__link">Fabrice Nerfin</a> on
           <a href="https://unsplash.com/photos/nebula-galaxy-puHQJZd3MDg" target="_blank" rel="noopener noreferrer" class="header__link">Unsplash</a>
         </p>
@@ -38,31 +39,31 @@
             <h2 class="main__txt-form">This is not a real online service!</h2>
             <div class="wrapper-row">
               <div class="wrapper-column">
-                <label for="first_name" class="main__label">FIRST NAME</label>
+                <label for="first_name" id="first_name_label" class="main__label">FIRST NAME</label>
                 <input type="text" id="first_name" name="first_name" required class="main__input">
               </div>
               <div class="wrapper-column">
-                <label for="last_name" class="main__label">LAST NAME</label>
+                <label for="last_name" id="last_name_label" class="main__label">LAST NAME</label>
                 <input type="text" id="last_name" name="last_name" required class="main__input">
               </div>
             </div>
             <div class="wrapper-row">
               <div class="wrapper-column">
-                <label for="email" class="main__label">EMAIL</label>
+                <label for="email" id="email_label" class="main__label">EMAIL</label>
                 <input type="email" id="email" name="email" required class="main__input">
               </div>
               <div class="wrapper-column">
-                <label for="phone_number" class="main__label">PHONE NUMBER</label>
+                <label for="phone_number" id="phone_number_label" class="main__label">PHONE NUMBER</label>
                 <input type="tel" id="phone_number" name="phone_number" required class="main__input">
               </div>
             </div>
             <div class="wrapper-row">
               <div class="wrapper-column">
-                <label for="password" class="main__label">PASSWORD</label>
+                <label for="password" id="password_label" class="main__label">PASSWORD</label>
                 <input type="password" id="password" name="password" required class="main__input main__input-password">
               </div>
               <div class="wrapper-column">
-                <label for="confirm_password" class="main__label">CONFIRM PASSWORD</label>
+                <label for="confirm_password" id="confirm_password_label" class="main__label">CONFIRM PASSWORD</label>
                 <input type="password" id="confirm_password" name="confirm_password" required class="main__input main__input-password">
                 <p class="main__txt-password">* Passwords do not match</p>
               </div>
@@ -75,5 +76,8 @@
         </div>
       </form>
     </main>
+    <footer class="footer">
+      <p>Developed by <a href="https://github.com/Lanezedfer" target="_blank" rel="noopener noreferrer" class="footer__link">Lanezedfer</a></p>
+    </footer>
   </body>
 </html>

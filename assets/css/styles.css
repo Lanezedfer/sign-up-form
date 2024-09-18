@@ -186,6 +186,10 @@ main {
   margin: 1em 0 0.1em 0;
 }
 
+.main__label--focus {
+  color: var(--color-accent-primary);
+}
+
 .main__link {
   color: var(--color-accent-primary);
   font-weight: var(--font-weight-bold);
@@ -215,4 +219,116 @@ main {
 .main__txt-password {
   color: var(--color-warning);
   margin: 0.3em 0;
+}
+
+
+
+/* Footer
+---------------------------------------------------------------------------------------------------- */
+footer {
+  display: none;
+}
+
+.footer__link {
+  color: var(--color-accent-primary);
+  font-weight: var(--font-weight-bold);
+  text-decoration: none;
+}
+
+.footer__link:hover {
+  color: var(--color-accent-select-hover);
+}
+
+
+
+/* Media Queries
+---------------------------------------------------------------------------------------------------- */
+@media only screen and (max-width: 1240px) {
+  .header__logo-wrapper {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 970px) {
+  body {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  header {
+    align-content: center;
+    flex: 1;
+  }
+
+  .header__bottom {
+    justify-content: start;
+    padding: 0;
+  }
+
+  .header__top {
+    justify-content: end;
+  }
+
+  .header__txt-credit {
+    background-color: rgb(0, 0, 0, 0.7);
+    padding-bottom: 0.3em;
+  }
+
+  .header__txt-profile {
+    display: none;
+  }
+
+  main {
+    flex: 0;
+  }
+
+  .main__input {
+    max-width: none;
+  }
+
+  .main__label,
+  .main__txt-password {
+    text-align: left;
+  }
+
+  footer {
+    background-color: var(--color-background-secondary);
+    display: block;
+    font-size: var(--font-size-standard);
+    margin-top: auto;
+    padding: 1em;
+  }
+}
+
+@media only screen and (max-width: 645px) {
+  .wrapper-column {
+    width: 100%;
+  }
+  
+  .wrapper-row {
+    display: block;
+  }
+
+  .main__btn {
+    width: 100%;
+  }
+
+  .main__input {
+    background-color: var(--color-background-secondary);
+    color: var(--color-foreground);
+    font-size: var(--font-size-medium);
+    margin: 1em 0 0.1em 0;
+  }
+
+  .main__label {
+    background-color: var(--color-background-secondary);
+    margin: 1em 0 -1.8em 0.8em;
+    position: relative;
+    text-wrap: nowrap;
+    width: min-content;
+  }
+
+  .main__txt-password {
+    text-align: center;
+  }
 }
