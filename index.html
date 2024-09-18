@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-up Form</title>
+    <link href="./assets/images/favicon/lanezedfer-favicon-32x32.ico" rel="icon" type="image/x-icon" sizes="32x32">
+    <link href="./assets/images/favicon/lanezedfer-favicon-16x16.ico" rel="icon" type="image/x-icon" sizes="16x16">
+    <link href="./assets/css/reset.css" rel="stylesheet">
+    <link href="./assets/css/styles.css" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <div class="header__top">
+        <div class="header__logo-wrapper">
+          <img src="./assets/images/logo/lanezedfer.png" alt="logo" class="header__img">
+          <h1 class="header__txt-logo">Sign-up Form</h1>
+        </div>
+        <div class="header__logo-wrapper">
+          <p>Developed by <a href="https://github.com/Lanezedfer" target="_blank" rel="noopener noreferrer" class="header__link">Lanezedfer</a></p>
+        </div>
+      </div>
+      <div class="header__bottom">
+        <p>
+          Image by <a href="https://unsplash.com/@fabiolik" target="_blank" rel="noopener noreferrer" class="header__link">Fabrice Nerfin</a> on
+          <a href="https://unsplash.com/photos/nebula-galaxy-puHQJZd3MDg" target="_blank" rel="noopener noreferrer" class="header__link">Unsplash</a>
+        </p>
+      </div>
+    </header>
+    <main>
+      <div class="main__row">
+        <p class="main__txt-hero">There are many things to do, but starting is the most important part.</p>
+        <p class="main__txt-hero">Sign up now to get started. You <em>know</em> you want to.</p>
+      </div>
+      <form action="/" method="get">
+        <fieldset class="main__form">
+          <div class="main__row">
+            <h2 class="main__txt-form">This is not a real online service!</h2>
+            <div class="wrapper-row">
+              <div class="wrapper-column">
+                <label for="first_name" class="main__label">FIRST NAME</label>
+                <input type="text" id="first_name" name="first_name" required class="main__input">
+              </div>
+              <div class="wrapper-column">
+                <label for="last_name" class="main__label">LAST NAME</label>
+                <input type="text" id="last_name" name="last_name" required class="main__input">
+              </div>
+            </div>
+            <div class="wrapper-row">
+              <div class="wrapper-column">
+                <label for="email" class="main__label">EMAIL</label>
+                <input type="email" id="email" name="email" required class="main__input">
+              </div>
+              <div class="wrapper-column">
+                <label for="phone_number" class="main__label">PHONE NUMBER</label>
+                <input type="tel" id="phone_number" name="phone_number" required class="main__input">
+              </div>
+            </div>
+            <div class="wrapper-row">
+              <div class="wrapper-column">
+                <label for="password" class="main__label">PASSWORD</label>
+                <input type="password" id="password" name="password" required class="main__input main__input-password">
+              </div>
+              <div class="wrapper-column">
+                <label for="confirm_password" class="main__label">CONFIRM PASSWORD</label>
+                <input type="password" id="confirm_password" name="confirm_password" required class="main__input main__input-password">
+                <p class="main__txt-password">* Passwords do not match</p>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        <div class="main__row">
+          <button type="submit" class="main__btn">Create Account</button>
+          <p class="main__txt-login">Already have an account? <a href="#" class="main__link">Log in</a></p>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>
